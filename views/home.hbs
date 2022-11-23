@@ -1,0 +1,65 @@
+<div class="container-fluid g-0">
+<div class="weather h-100vh row g-0">
+    <div class="col-4">
+        <div class="d-flex h-100vh more-inform flex-column justify-content-center  align-items-center">
+            <table class="table-weather-inform">
+                <tr class="cloud">
+                    <td>
+                        <img class="more-inform-image" src="/image/clouds-unscreen.gif" alt="">
+                    </td>
+                    <td>
+                        <span>{{weather.clouds}} %</span>
+                    </td>
+                </tr>
+                <tr class="rain">
+                    <td>
+                        <img class="more-inform-image" src="/image/rain-unscreen.gif" alt="">
+                    </td>
+                    <td>
+                        <span>{{weather.humidity}} g/kg</span>   
+                    </td>
+                </tr>
+                <tr class="wind">
+                    <td>
+                        <img class="more-inform-image" src="/image/wind-unscreen.gif" alt=""> 
+                    </td>
+                    <td>
+                        <span>{{weather.wind}} km/h</span>  
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div> 
+    <div class="col-4">  
+        <div class="left-inform h-100vh justify-content-center  align-items-center d-flex ">
+            <form action="/" method="POST">
+                <div class="mb-3">
+                    <label for="cityInput" class="form-label city-text-input">City Name</label>
+                    <input type="text" required name="cityName" class="form-control" id="cityInput"> 
+                </div> 
+                <button  type="submit" class="d-block w-100 btn btn-primary">Go</button>
+            </form> 
+            <div class="temperature position-relative">
+                <span class="position-absolute celsius">O</span>
+                {{weather.temp}}
+            </div>
+            <div class="nation">
+                {{weather.name}}, {{weather.country}}
+            </div>
+            <div class="image">
+                <img src="{{weather.icon}}" alt="">
+            </div>
+            <div class="desc">
+                {{weather.desc}}
+            </div>
+        </div>
+    </div>  
+    <div class="col-4">
+        <div class="h-100vh justify-content-center  align-items-center d-flex ">
+            <div class="background-right"></div>
+        </div>
+    </div> 
+</div>
+
+<script> 
+</script>
